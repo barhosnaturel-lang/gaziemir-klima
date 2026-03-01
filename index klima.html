@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaziemir Klima Servisi | Hızlı Servis & Uygun Fiyat</title>
+    <meta name="description" content="Gaziemir ve İzmir genelinde hızlı servis ve uygun fiyat garantisiyle profesyonel klima bakımı, onarımı ve montajı. Hemen randevu alın!">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #f4f7f6; }
+        header { background: #0056b3; color: white; padding: 2rem 0; text-align: center; }
+        .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
+        .highlight { background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: -50px; }
+        .motto { font-size: 24px; color: #0056b3; font-weight: bold; margin: 10px 0; }
+        .btn-wa { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
+        .services { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; }
+        .card { flex: 1; min-width: 250px; background: white; padding: 20px; border-radius: 8px; border-top: 5px solid #0056b3; text-align: center; }
+        .form-area { background: white; padding: 30px; margin-top: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; }
+        footer { text-align: center; padding: 40px; color: #777; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>İzmir Klima Teknik Destek</h1>
+    <p>Gaziemir • Menderes • Karabağlar • Buca</p>
+</header>
+
+<div class="container">
+    <div class="highlight">
+        <div class="motto">⚡ HIZLI SERVİS | 💰 UYGUN FİYAT</div>
+        <p>Klimanızda sorun mu var? Beklemeyin! Aynı gün servis, şeffaf fiyatlandırma ve garantili işçilikle yanınızdayız.</p>
+        <a href="https://wa.me/905468435995" class="btn-wa">📲 Hemen WhatsApp'tan Yazın</a>
+    </div>
+
+    <div class="services">
+        <div class="card">
+            <h3>Detaylı Bakım</h3>
+            <p>Enerji tasarrufu ve sağlık için ilaçlı temizlik.</p>
+        </div>
+        <div class="card">
+            <h3>Arıza & Tamir</h3>
+            <p>Her marka ve modelde hızlı yedek parça ve onarım.</p>
+        </div>
+        <div class="card">
+            <h3>Montaj & De-Montaj</h3>
+            <p>Hatasız kurulum ve güvenli sökme-takma işlemleri.</p>
+        </div>
+    </div>
+
+    <div class="form-area">
+        <h2 style="text-align: center;">Hızlı Randevu Formu</h2>
+        <form id="servisForm">
+            <input type="text" id="ad" placeholder="Adınız Soyadınız" required>
+            <input type="text" id="adres" placeholder="Semt / Mahalle" required>
+            <select id="islem">
+                <option value="Bakım">Klima Bakımı</option>
+                <option value="Arıza">Arıza Onarım</option>
+                <option value="Montaj">Montaj / Sökme-Takma</option>
+            </select>
+            <button type="button" onclick="gonder()">Talebi İlet</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Gaziemir Klima Servisi - Tüm hakları saklıdır.</p>
+</footer>
+
+<script>
+    function gonder() {
+        const ad = document.getElementById('ad').value;
+        const adres = document.getElementById('adres').value;
+        const islem = document.getElementById('islem').value;
+        const numara = "905468435995";
+        
+        if(!ad || !adres) { alert("Lütfen boş alanları doldurun."); return; }
+        
+        const mesaj = `Merhaba, klima servis talebim var.%0A*İsim:* ${ad}%0A*Adres:* ${adres}%0A*İşlem:* ${islem}`;
+        window.open(`https://wa.me/${numara}?text=${mesaj}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
